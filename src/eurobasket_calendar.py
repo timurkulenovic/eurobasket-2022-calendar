@@ -44,8 +44,9 @@ for group in ["A", "B", "C", "D"]:
     pr_data.append([f"{h_team} vs. {a_team}", date, date, start_time, end_time,
                     all_day_event, arena])
 
-pr_data.append(["Great Britain vs. Italy", "09/08/2022", "21:00",
-             "09/08/2022", "21:00", "Mediolanum Forum, Milan"])
+# There is one match with no data in Wikipedia
+pr_data.append(["Great Britain vs. Italy", "09/08/2022", "09/08/2022", "21:00", "23:00", 
+  False, "Mediolanum Forum, Milan"])
 df_pr = pd.DataFrame(data=pr_data, columns=["Subject", "Start Date", "End Date",
                                             "Start Time", "End Time",
                                             "All Day Event", "Location"])
